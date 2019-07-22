@@ -71,8 +71,6 @@ app.get('*',(req,res)=>{
     res.send('Page is 404')
 })
 
-// set up static page
-
 app.listen(3000,()=>{
     console.log("This is server")
 })
