@@ -3,6 +3,7 @@ const express = require('express')
 const path = require('path')
 const nodes = require('./untils/geocoding.js')
 const app = express()
+const port = process.env.PORT || 3000
 // define path
 const pathView = path.join(__dirname,'template/views')
 const pathHbs = path.join(__dirname,'template/partials')
@@ -71,6 +72,6 @@ app.get('*',(req,res)=>{
     res.send('Page is 404')
 })
 
-app.listen(3000,()=>{
-    console.log("This is server")
+app.listen(port,()=>{
+    console.log("This is server" + port)
 })

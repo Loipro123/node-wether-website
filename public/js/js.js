@@ -8,7 +8,7 @@ document.querySelector('#form1').addEventListener('submit',(e)=>{
     address = content.value;
     locations.textContent = 'Loading....';
     forcasts.textContent = '';
-    fetch('http://localhost:3000/weather?address='+address).then((response)=>{
+    fetch('/weather?address='+address).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             locations.textContent=data.error ;
