@@ -69,7 +69,7 @@ app.get('/weather',(req,res)=>{
 
 })
 app.get('*',(req,res)=>{
-    res.send('Page is 404')
+    res.send('Page is 404. You get some thing wrong')
 })
 
 app.listen(port,()=>{
